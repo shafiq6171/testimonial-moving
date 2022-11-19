@@ -59,6 +59,6 @@ Finally a really simple way to manage testimonials on your site. This plugin cre
 == Licence ==
  GPL Version 3
 
-== Changelog ==
+=== Changelog ===
 = 1.0.0 =
 - Release
