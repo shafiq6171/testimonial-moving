@@ -57,7 +57,6 @@ class Testimonial_Moving_Admin_Metaboxes_Testimonial{
 			'textarea_rows' 	=> 3, 
 			'quicktags' 		=> false,
 			"teeny" 			=> true
-			
 		) ); 
 	}
 }

@@ -20,13 +20,13 @@ echo "<section class=\"testimonial_moving_slide_inner section-column\">";
 		// AUTHOR INFO
 		if( $author_name AND $show_author ){
 			echo "<div class=\"testimonial_moving_author_info\">\n";
-			echo wpautop($author_name);
+			echo esc_attr($author_name);
 			echo "</div>\n";				
 		}
 		// company INFO
 		if( $company AND $show_company ){
 			echo "<div class=\"testimonial_moving_company_info\">\n";
-			echo wpautop($company);
+			echo wp_kses_post($company);
 			echo "</div>\n";				
 		}
 	echo "</div>\n";
@@ -73,8 +73,8 @@ echo "<section class=\"testimonial_moving_slide_inner section-column\">";
 
 			echo "	<div class=\"dtreviewed\"> " . get_the_date('c') . "</div>";
 			echo "	<div class=\"reviewer\"> ";
-				echo "	<div class=\"fn\"> " . wpautop($author_name) . "</div>";
-				echo "	<div class=\"fn\"> " . wpautop($company) . "</div>";
+				echo "	<div class=\"fn\"> " . esc_attr($author_name) . "</div>";
+				echo "	<div class=\"fn\"> " . wp_kses_post($company) . "</div>";
 				if ( has_post_thumbnail() ) { echo get_the_post_thumbnail( get_the_ID(), 'thumbnail', array('class' => 'photo' )); }
 			echo "	</div>";
 			echo "	<div class=\"summary\"> " . testimonial_moving_excerpt(apply_filters('testimonial_moving_microdata_summary_length', 300)) . "</div>";

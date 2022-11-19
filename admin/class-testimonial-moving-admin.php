@@ -212,21 +212,21 @@ class Testimonial_Moving_Admin {
 		$edit_link = get_edit_post_link( $post_id );
 		$template_ids = testimonial_moving_break_piped_string( get_post_meta( $post_id, "_template_id", true ) );
 		
-		$template_title_array = array();
+		$template_title = "";
 		foreach($template_ids as $template_id) {
-			$template_title_array[] = "<a href='post.php?action=edit&post=" . $template_id . "'>" . get_the_title( $template_id ) . "</a>"; 
+			$template_title .= "<a href='post.php?action=edit&post=" . $template_id . "'>" . get_the_title( $template_id ) . "</a>"; 
 		}
 		$this_testimonial = get_post($post_id);
 		if( $column == 'ID' ){
-			echo implode(", ", $template_title_array);
+			echo $template_title;
 		}elseif($column == 'image' ){
-			echo '<a href="' . $edit_link . '">' . get_the_post_thumbnail( $post_id, array( 50, 50 )) . '</a>';
+			echo '<a href="' . esc_url($edit_link) . '">' . get_the_post_thumbnail( $post_id, array( 50, 50 )) . '</a>';
 		}elseif( $column == 'order' ){
-			echo '<a href="' . $edit_link . '">' . $this_testimonial->menu_order . '</a>';
+			echo '<a href="' . esc_url($edit_link) . '">' . $this_testimonial->menu_order . '</a>';
 		}elseif($column == 'rating' ){
-			echo get_post_meta( $post_id, "_rating", true);
+			echo esc_attr(get_post_meta( $post_id, "_rating", true));
 		}elseif($column == 'author_info' ){
-			echo get_post_meta( $post_id, "_author_name", true);
+			echo esc_attr(get_post_meta( $post_id, "_author_name", true));
 		}elseif($column == 'shortcode' ){
 			echo '<b>' . __('Display as Single' , 'testimonial-moving') . '</b><br />'; 
 			echo '[testimonial_single id="' . $post_id . '"]';
@@ -238,7 +238,6 @@ class Testimonial_Moving_Admin {
 			'title'    => 'title',
 			'order'    => 'menu_order'
 		);
-
 		return $columns;
 	}
 	/* PARSE TESTIMONIALS BY TEMPLATE ID */
