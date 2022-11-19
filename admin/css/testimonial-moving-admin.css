@@ -1,0 +1,325 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+ *,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+ .wps-link {
+    font-family: 'NunitoSans-Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    color: #3F4756;
+    display: inline-block;
+}
+.active {
+    color: #004EB6;
+    position: relative;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 3px solid var( --mdc-theme-primary);
+    border-radius: 2px;
+}
+
+.wps-bg-white {
+    background-color: #ffffff;
+    margin-right: 15px;
+}
+
+.wps-header-container {
+    padding: 28px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    margin-right: 15px;
+}
+.wps-header-container__links {
+    margin: 10px 0 0 auto;
+}
+
+.wps-header-container__links span {
+    padding: 0 5px;
+}
+.wps-header-container .wps-header-title {
+ 	flex: 0 0 50%;
+ 	max-width: 50%;
+ }
+ .wps-header-container .wps-header-container__links {
+ 	flex: 0 0 calc(50% - 15px);
+ 	max-width: calc(50% - 15px);
+ 	margin: 0 !important;
+ 	padding-left: 15px;
+ 	text-align: right;
+ }
+.wps-header-title {
+    font-family: 'NunitoSans-ExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    color: var(--mdc-theme-primary);
+    flex: 0 0 100%;
+    max-width: calc(100% - 100px);
+}
+
+.wps-navbar {
+    padding: 0 32px;
+    border-bottom: 1px solid rgba(63, 71, 86, 0.25);
+}
+
+.wps-navbar__items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wps-navbar__items li {
+    margin-right: 32px;
+    margin-bottom: 0;
+}
+
+.wps-navbar__items li a {
+    padding: 18px 0;
+    color: var(--mdc-theme-primary);
+}
+
+.wps-section {
+    padding: 28px 32px;
+}
+.wps-col-wrap {
+    margin-bottom: 35px;
+}
+
+.wps-shadow-panel {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(63, 71, 86, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.wps-password-hidden {
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s linear;
+    user-select: none;
+}
+
+.wps-password-hidden:hover {
+    opacity: 1;
+}
+
+.wps-options {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)!important;
+}
+.wps-cta-btn {
+    flex: 0 0 100%;
+    max-width: 100px;
+    text-align: right;
+    margin: 20px 15px;
+}
+
+.wps-cta-btn a {
+    color: #ffffff;
+}
+
+.wps-form-group__control .mdc-switch__native-control {
+    width: 68px;
+    height: 48px;
+}
+
+.wps-btn-primary {
+    color: #ffffff;
+    background-color: #6200ee;
+    border-color: #004EB6;
+}
+
+.wps-btn {
+    display: inline-block;
+    font-family: 'NunitoSans-Bold';
+    font-weight: bold;
+    line-height: 16px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 16px 32px;
+    font-size: 14px;
+    border-radius: 35px;
+    letter-spacing: 0.3px;
+    text-transform: capitalize;
+}
+
+.wps-btn-primary:hover {
+    color: #fff;
+}
+
+.wps-shadow-panel h3 {
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+ .wps-form-group{
+	display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px 35px;
+ }
+.wps-form-group:last-of-type .wps-form-group__label {
+	display: none;
+}
+.wps-form-group__label {
+    flex: 0 0 100%;
+    max-width: 200px;
+    padding: 0 15px;
+}
+.wps-form-field-inline{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -13px 10px;
+}
+ .wps-form-label{
+	 font-family: 'NunitoSans-SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.3px; 
+ }
+.wps-form-radio-label {
+	margin-right: 20px;
+}
+ .wps-form-group__control{
+	flex: 0 0 100%;
+    max-width: calc(100% - 200px);
+    padding: 0 15px;
+ }
+
+.wps-text-field--outlined{}
+.wps-text-field__input {
+	 
+ }
+.wps-text-field-helper-line {
+	color: #888;
+	font-style: italic;
+}
+ .wps-text-field-helper-text--persistent{
+	 
+ }.
+ .wps-helper-text{
+	 
+ }
+.wps-text-field--with-trailing-icon{
+	
+}
+.wps-notched-outline{
+	
+}
+.wps-notched-outline__leading{
+	
+}
+.wps-notched-outline__notch{
+	
+}
+.wps-notched-outline__trailing{
+	
+}
+.material-icons{}
+.wps-text-field__icon{}
+.wps-text-field__icon--trailing{}
+.wps-password-hidden {
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s linear;
+    user-select: none;
+}
+
+.wps-password-hidden:hover {
+    opacity: 1;
+}
+.wps-text-field--textarea{
+	
+}
+.wps-floating-label {
+    color: var( --wps-theme-primary);
+}
+.wps-text-field__resizer{
+	
+}
+.wps-form-select:hover select {
+    border-color: rgba(0, 0, 0, .87)!important;
+    color: rgba(0, 0, 0, .87);
+}
+
+.wps-form-select:focus select {
+    border-color: #2196f3!important;
+}
+.wps-textfield__label{
+
+}
+.wps-checkbox{
+	
+}
+.wps-checkbox__native-control{
+	
+}
+.wps-pl-4 {
+    padding: 0 4px!important;
+}
+.wps-radio{
+	
+}
+.wps-radio__native-control{
+	
+}
+.wps-switch{}
+.wps-switch__track{}
+.wps-switch__thumb-underlay{}
+.wps-switch__thumb{}
+.wps-button {
+	border-radius: 35px !important;
+	padding: 12px 24px !important;
+	height: 100%;
+	cursor: pointer;
+	border: 1px solid #ccc;
+}
+
+.wps-button__label{}
+.wps-button__ripple{}
+
+ @media only screen and (max-width: 767px) {
+	.wps-form-group__label {
+		flex: 0 0 100%;
+		margin-bottom: 15px;
+		max-width: 100%;
+	}
+	.wps-form-group__control {
+		flex: 0 0 100%;
+		max-width: 100%
+	}
+	.wps-form-group__control label {
+		display: block;
+	}
+	.wps-form-group__control .wps-text-field-helper-line {
+		margin-top: 10px;
+	}
+
+
+}
